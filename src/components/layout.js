@@ -3,14 +3,15 @@ import { Link } from "gatsby"
 import { IdentyContextProvider } from "react-netlify-identity-widget"
 
 import "./layout.css"
+import { IdentityContextProvider } from "react-netlify-identity"
 
 const Layout = ({ children }) => (
-  <IdentyContextProvider url="https://gsk-jamstack-intro.netlify.app">
+  <IdentityContextProvider url="https://gsk-jamstack-intro.netlify.app">
     <header>
       <Link to="/">JAMstack App</Link>
     </header>
     <main>{children}</main>
-  </IdentyContextProvider>
+  </IdentityContextProvider>
 )
 
 export default Layout
